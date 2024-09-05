@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Order Details</h2>
+    <div class="card" id="printable-area">
+        <div class="card-body d-flex justify-content-between align-items-start">
+            <div>
+                <h5 class="card-title">Order #{{ order.id }}</h5>
+                <p class="card-text">
+                    <strong>Name:</strong> 
+                    {% if order.customer %}
+                        {{ order.customer }}
+                    {% else %}
+                        {{ order.user.username }}
+                    {% endif %}
+                </p>
+                <p class="card-text"><strong>Product:</strong> {{ product.name }} (ID: {{ product.id }})</p>
+                <p class="card-text"><strong>Quantity:</strong> {{ order.quantity }}</p>
+                <p class="card-text"><strong>Order Date:</strong> {{ order.order_date }}</p>
+                <p class="card-text"><strong>Status:</strong> {{ order.get_status_display }}</p>
+            </div>
+            <div>
+                {% if product.image %}
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="img-fluid" style="max-width: 150px;">
+                {% else %}
+                    <img src="{% static 'images/default-product.jpg' %}" alt="Default Image" class="img-fluid" style="max-width: 150px;">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button class="btn btn-primary no-print" onclick="window.print()">Print Order Details</button>
+        <a href="{% url 'order_list' %}" class="btn btn-secondary no-print">Back to Order List</a>
+    </div>
+</div>
+
+<style>
+/* Print Styles */
+@media print {
+    body {
+        margin: 1px;
+        padding: 0;
+    }
+    #printable-area {
+        position: relative;
+        width: auto;
+        padding: 25px;
+        border: none;
+        page-break-inside: avoid;
+    }
+    .no-print {
+        display: none;
+    }
+    /* Adjust page size */
+    @page {
+        size: auto; /* Auto-size based on content */
+        margin: 0; /* Remove default margins */
+    }
+    /* Ensure content fits tightly around the details */
+    html, body {
+        width: fit-content;
+        height: fit-content;
+    }
+}
+</style>
+{% endblock %}

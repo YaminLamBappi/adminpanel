@@ -1,0 +1,50 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+}
+.btn-custom-small {
+    font-size: 0.6rem; /* Smaller font size */
+    padding: 200px; /* Smaller padding */
+}
+/* Custom styles for Product Details page with image on the left */
+.product-image {
+    margin-bottom: 1rem;
+}
+
+.product-image img {
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info {
+    padding-left: 1.5rem;
+}
+
+.product-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-info p {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+}
+
+.product-info p strong {
+    color: #333;
+}
+/* Custom Supplier Page Styles */
+.supplier-info {
+    background-color: #f8f9fa; /* Light gray background for card */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.supplier-name {
+    font-size: 1.5rem;
+    color: #343a40;
+    margin-bottom: 1rem;
+}

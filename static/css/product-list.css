@@ -1,0 +1,104 @@
+/* General admin panel styling */
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.sidebar {
+    background-color: #d3daed;
+    height: 100%;
+    padding-top: 1rem;
+}
+
+.sidebar h5 {
+    background-color: #fff700;
+    color: #000000;
+    border: 2px solid transparent;
+    font-size: 1.1rem;
+    border-color: #007bff; /* Border color for active link */
+    border-radius: 1px;
+}
+
+.sidebar .nav-link {
+    color: #000000;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid transparent; /* Default border (transparent) */
+}
+
+.sidebar .nav-link.active {
+
+color: #000000;
+    border-radius: 1px;
+}
+
+/* Optional: hover effect for nav-link */
+.sidebar .nav-link:hover {
+    border-color: #0056b3; /* Darker border color on hover */
+}
+
+.main-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.main-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.list-group-item {
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.list-group-item:hover {
+    background-color: #f9f9f9;
+}
+
+.list-group-item h5 {
+    font-size: 1.25rem;
+}
+
+.list-group-item p {
+    margin: 0;
+    color: #555;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.pagination .page-item .page-link {
+    color: #ff0000;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #fc0000;
+}
+
+.pagination .page-item .page-link:focus {
+    box-shadow: none;
+}

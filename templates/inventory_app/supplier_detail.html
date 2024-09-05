@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Supplier Details</h2>
+    <div class="row">
+        <!-- Content Section -->
+        <div class="col-md-8 offset-md-2">
+            <div class="card">
+                <div class="card-body">
+                    <!-- Supplier Name -->
+                    <h4 class="card-title">{{ supplier.name }}</h4>
+                    
+                    <!-- Supplier Information -->
+                    <p class="card-text">
+                        <strong>Contact Information:</strong>
+                        <br>
+                        {{ supplier.contact_info }}
+                    </p>
+                    
+                    <!-- Back Button -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

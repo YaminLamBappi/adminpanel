@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mt-4">
+    <h2 class="mb-4">Product Details</h2>
+    <div class="row">
+        <!-- Image Section -->
+        <div class="col-md-4">
+            <div class="product-image">
+                <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'images/placeholder.png' %}{% endif %}" class="img-fluid" alt="{{ product.name }}">
+            </div>
+        </div>
+        <!-- Content Section -->
+        <div class="col-md-8">
+            <div class="product-info">
+                <h5 class="product-title">{{ product.name }}</h5>
+                <p><strong>Category:</strong> {{ product.category.name }}</p>
+                <p><strong>Supplier:</strong> <a href="{% url 'supplier_detail' pk=product.supplier.pk %}">{{ product.supplier.name }}</a></p>
+                <p><strong>Price:</strong> ${{ product.price }}</p>
+                <p><strong>Stock Quantity:</strong> {{ product.stock_quantity }}</p>
+                <p><strong>Description:</strong> {{ product.description }}</p>
+                <a href="{% url 'product_update' pk=product.pk %}" class="btn btn-info">Update Product</a>
+                <a href="{% url 'product_list' %}" class="btn btn-secondary">Back to Product List</a>
+                <a href="{% url 'create_order' %}?product_id={{ product.id }}" class="btn btn-primary">Place Order</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

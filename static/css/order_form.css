@@ -1,0 +1,42 @@
+/* Form Styling */
+.order-form {
+    max-width: 500px; /* Limits the width of the form */
+    margin: auto; /* Centers the form */
+}
+
+.order-form .form-group {
+    margin-bottom: 1rem; /* Reduces space between fields */
+}
+
+.order-form .form-control {
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Lighter border */
+    padding: 8px; /* Smaller padding */
+}
+
+.order-form .form-control:focus {
+    border-color: #007bff; /* Highlight border color */
+    box-shadow: none; /* Remove shadow */
+}
+
+.order-form .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 10px; /* Compact button */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.order-form .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Error Message Styling */
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 1rem;
+}
